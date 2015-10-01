@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="scripts/css/bootstrap.min.css">
+  <script src="jquery-2.1.4.js"></script>
+  <script src="scripts/js/bootstrap.min.js"></script>
+  <script src="client.js"></script>
+  <style>
+      h2 {text-align: center;}
+  </style>
+</head>
+<body>
+
+<div class="container ">
+  <div class="row vertical-center-row" style="margin-top:20px">
+  <h2><%=pageMessage%></h2>
+  <div class="col-md-offset-4" style="margin-top:80px">
+  <form class="form-horizontal" role="form" id="signUpform" action="/signup" method="POST">
+    
+     <div class="form-group">
+      <label class="control-label col-sm-3" for="firstname">First Name</label>
+      <div class="col-xs-3">
+        <input type="text" class="form-control" id="firstname" name="firstname" placeholder="Enter first name">
+        <span class="help-inline text-warning" id="fnerror" style="display:none;"></span>
+      </div>
+    </div>
+ 
+    <div class="form-group">
+      <label class="control-label col-sm-3" for="lastname">Last name</label>
+      <div class="col-xs-3">
+        <input type="text" class="form-control" id="lastname" name="lastname" placeholder="Enter last name">
+        <span class="help-inline text-warning" id="lnerror" style="display:none;"></span>
+      </div>
+    </div>
+
+     <div class="form-group">
+      <label class="control-label col-sm-3" for="location">Location</label>
+      <div class="col-xs-3">
+        <input type="text" class="form-control" id="location" name="location" placeholder="Enter location">
+        <span class="help-inline text-warning" id="loerror" style="display:none;"></span>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="control-label col-sm-3" for="username">Username</label>
+      <div class="col-xs-3">
+        <input type="text" class="form-control" id="username" name="username" placeholder="Enter username">
+        <span class="help-inline text-warning" id="uerror" style="display:none;"></span>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="control-label col-sm-3" for="pwd">Password</label>
+      <div class="col-xs-3">          
+        <input type="password" class="form-control" id="password" name="password" placeholder="Enter password">
+        <span class="help-inline text-warning" id="perror" style="display:none;"></span>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="control-label col-sm-3" for="repassword">Confirm Password</label>
+      <div class="col-xs-3">          
+        <input type="password" class="form-control" id="repassword" placeholder="Confirm password">
+        <span class="help-inline text-warning" id="rperror" style="display:none;">difference in passwords!please re-enter</span>
+      </div>
+    </div>
+    <div id="element"></div>   
+    <div class="form-group">        
+      <div class="col-sm-offset-3 col-sm-10">
+        <div class="btn-group">
+        <button type="submit" class="btn btn-info">Log In</button>
+        <button type="button" class="btn btn-link">Sign Up</button>
+      </div>
+    </div>
+    </div>
+  
+  </form>
+</div>
+</div>
+</div>
+</body>
+<script>
+
+</script>
+</html>

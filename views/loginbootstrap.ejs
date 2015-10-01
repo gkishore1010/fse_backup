@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="scripts/css/bootstrap.min.css">
+  <script src="jquery-2.1.4.js"></script>
+  <script src="scripts/js/bootstrap.min.js"></script>
+ 
+
+  <style>
+      h2 {text-align: center;}
+  </style>
+</head>
+<body>
+
+<div class="container ">
+  <div class="row vertical-center-row" style="margin-top:20px">
+  <h2><%=pageMessage%></h2>
+  <div class="col-md-offset-4" style="margin-top:80px">
+  <form class="form-horizontal" role="form" id="loginForm" action="/login" method="POST">
+    <div class="form-group">
+      <label class="control-label col-sm-3" for="username">Username</label>
+      <div class="col-xs-3">
+        <input type="text" class="form-control" id="username" name="username" placeholder="Enter username">
+        <span class="help-inline text-warning" id="uerror" style="display:none;"></span>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-3" for="pwd">Password</label>
+      <div class="col-xs-3">          
+        <input type="password" class="form-control" id="password" name="password" placeholder="Enter password">
+        <span class="help-inline text-warning" id="perror" style="display:none;"></span>
+      </div>
+    </div>
+
+  
+    <div class="form-group">        
+      <div class="col-sm-offset-3 col-sm-10">
+        <button type="submit" id="join" class="btn btn-info">Join</button>
+    </div>
+    </div>
+  
+  </form>
+</div>
+</div>
+</div>
+</body>
+ <script src="client.js"></script>
+</html>

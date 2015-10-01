@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="scripts/css/bootstrap.min.css">
+  <script src="jquery-2.1.4.js"></script>
+  <script src="scripts/js/bootstrap.min.js"></script>
+  <script src="client.js"></script>
+  <style>
+      h2 {text-align: center;}
+  </style>
+</head>
+<body>
+
+<div class="container ">
+  <div class="row vertical-center-row" style="margin-top:20px">
+  <h2>Sign Up</h2>
+
+  <div class="col-md-offset-4" style="margin-top:80px">
+  <h2><%=pageMessage%></h2>
+  <form class="form-horizontal" role="form" id="signUpform" action="/signup" method="POST">
+    
+     <div class="form-group">
+      <label class="control-label col-sm-3" for="firstname">First Name</label>
+      <div class="col-xs-3">
+        <input type="text" class="form-control" id="firstname" name="firstname" placeholder="Enter first name">
+        <span class="help-inline text-warning" id="fnerror" style="display:none;"></span>
+      </div>
+    </div>
+ 
+    <div class="form-group">
+      <label class="control-label col-sm-3" for="lastname">Last name</label>
+      <div class="col-xs-3">
+        <input type="text" class="form-control" id="lastname" name="lastname" placeholder="Enter last name">
+        <span class="help-inline text-warning" id="lnerror" style="display:none;"></span>
+      </div>
+    </div>
+
+     <div class="form-group">
+      <label class="control-label col-sm-3" for="location">Location</label>
+      <div class="col-xs-3">
+        <input type="text" class="form-control" id="location" name="location" placeholder="Enter location">
+        <span class="help-inline text-warning" id="loerror" style="display:none;"></span>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="control-label col-sm-3" for="username">Username</label>
+      <div class="col-xs-3">
+        <input type="text" class="form-control" id="username" name="username" placeholder="Enter username">
+        <span class="help-inline text-warning" id="uerror" style="display:none;"></span>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="control-label col-sm-3" for="pwd">Password</label>
+      <div class="col-xs-3">          
+        <input type="password" class="form-control" id="password" name="password" placeholder="Enter password">
+        <span class="help-inline text-warning" id="perror" style="display:none;"></span>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="control-label col-sm-3" for="repassword">Confirm Password</label>
+      <div class="col-xs-3">          
+        <input type="password" class="form-control" id="repassword" placeholder="Confirm password">
+        <span class="help-inline text-warning" id="rperror" style="display:none;"></span>
+      </div>
+    </div>
+
+    <div class="form-group">        
+      <div class="col-sm-offset-3 col-sm-10">
+        <button type="submit" class="btn btn-info">Sign Up</button>
+    </div>
+    </div>
+  
+  </form>
+</div>
+</div>
+</div>
+</body>
+<script>
+//spot checks username
+// var dict = {};
+// $.get("/reserved.txt",function(txt) {
+//   var words = txt.split( " " );
+//   for ( var i = 0; i < words.length; i++ ) {
+//     dict[ words[i] ] = true;
+//   }
+// });
+ 
+ // $('#username').blur(function() {
+
+
+ //  var name = $('#username').val();
+
+ //  if(dict[name]){
+ //     $('#uerror').text('illegal username');
+ //     $('#uerror').show();
+ //     $('#username').val('');
+ //   } 
+ //   else {
+ //    $('#uerror').text('');
+ //    $('#uerror').hide();
+ //   }  
+
+ //      if(!$('#username').val().length < 4){
+ //      $('#uerror').text('username must be atleast 4 characters');
+ //      $('#uerror').show();
+ //      $('#username').val('');
+ //      validated = false;
+ //      }
+ //       else {
+ //      $('#uerror').text('');
+ //      $('#uerror').hide();
+ //   }  
+
+
+ // });
+
+
+$('#signUpform').submit(function(e){
+  e.preventDefault();
+  var validated = true;
+
+//username validations      
+    //   if(!$('#username').val()){
+    //   $('#uerror').text('please enter username');
+    //   $('#uerror').show();
+    //   $('#username').val('');
+    //   validated = false;
+    //   }
+      
+    //   if(!$('#username').val().length < 4){
+    //   $('#uerror').text('username must be atleast 4 characters');
+    //   $('#uerror').show();
+    //   $('#username').val('');
+    //   validated = false;
+    //   }
+
+    //   var dict = {};
+    //   $.get("/reserved.txt",function(txt) {
+    //   var words = txt.split( " " );
+    //   for ( var i = 0; i < words.length; i++ ) {
+    //   dict[ words[i] ] = true;
+    //   }
+    //   });
+
+    //   var name = $('#username').val();
+
+    //   if(dict[name]){
+    //      $('#uerror').text('illegal username');
+    //      $('#uerror').show();
+    //      $('#username').val('');
+    //    } 
+    //    else {
+    //     $('#uerror').text('');
+    //     $('#uerror').hide();
+    //    }  
+    // //password validations
+    //   if(!$('#password').val()){
+    //     $('#perror').text('please enter a password');
+    //     $('#perror').show();
+    //     $('#password').val('');
+    //      validated = false;
+    //   }
+
+    //   if(!$('#password').val()){
+    //     $('#perror').text('please enter a password');
+    //     $('#perror').show();
+    //     $('#password').val('');
+    //      validated = false;
+    //   }
+
+    //   if($('#password').val().length < 3){
+    //     $('#perror').text('password must be atleast 3 characters');
+    //     $('#perror').show();
+    //     $('#password').val('');
+    //      validated = false;
+    //   }
+
+    //   if(!($('#password').val() == $(repassword).val())){
+    //     $('#rperror').text('please enter a password');
+    //     $('#perror').show();
+    //     $('#password').val('');
+    //      validated = false;
+    //   }
+      if(validated){
+        $('#signUpform')[0].submit();
+      }
+});
+</script>
+</html>

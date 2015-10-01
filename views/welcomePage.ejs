@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Case</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="scripts/css/bootstrap.min.css">
+  <script src="jquery-2.1.4.js"></script>
+  <script src="scripts/js/bootstrap.min.js"></script>
+  <script src="client.js"></script>
+</head>
+<body class="container">
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#welcomePage">SurvivorNet</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href="#directory" id="dirLink">Directory</a></li>
+        <li><a href="#chatRoom">Chat Room</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-user"></span> <%=user%></a></li>
+        <li><a href="#" onclick="document.getElementById('logoutForm').submit();"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+  
+ <form id="logoutForm" method="POST" action="/logout">
+  <input type="hidden" name="name" value="value" /> 
+</form>
+
+</body>
+<script>
+
+</script>
+</html>
